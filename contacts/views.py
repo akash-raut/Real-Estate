@@ -4,6 +4,7 @@ from . models import Contact
 
 
 def contact(request):
+    ''' Contains logic for saving contact for '''
     if request.method == 'POST':
         listing_id = request.POST['listing_id']
         listing = request.POST['listing']

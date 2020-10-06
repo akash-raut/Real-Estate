@@ -32,6 +32,7 @@ def listing(request, listing_id):
 
 
 def search(request):
+    ''' Holds logic for search fields for keyword, city, state, bedroom and price '''
     queryset_list = Listing.objects.order_by('-list_date')
 
     # Keywords

@@ -65,7 +65,7 @@ def login(request):
 
 
 def logout(request):
-    '''  '''
+    ''' Logout the user and redirect to index page '''
     if request.method == 'POST':
         auth.logout(request)
         messages.success(request, 'You are now logged out')
@@ -73,7 +73,7 @@ def logout(request):
 
 
 def dashboard(request):
-    '''  '''
+    ''' Will contain logged in user's enquiries '''
     user_contacts = Contact.objects.order_by('-contact_date').filter(user_id=request.user.id)
 
     context = {

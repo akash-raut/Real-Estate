@@ -3,7 +3,7 @@ from datetime import datetime
 
 
 class Contact(models.Model):
-    '''  '''
+    ''' Contains data fields for Contact table '''
     listing = models.CharField(max_length=200)
     listing_id = models.IntegerField()
     name = models.CharField(max_length=200)
